@@ -33,13 +33,13 @@
                         hold-trigger-on-release;
                 };
 
-                morph_paren_less: morph_paren_less {
+                m_lpar_lt: m_lpar_lt {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp LPAR>, <&kp LT>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
-                morph_paren_greater: morph_paren_greater {
+                m_rpar_gt: m_rpar_gt {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp RPAR>, <&kp GT>;
@@ -74,60 +74,76 @@
 
                 default_layer {
                         display-name = "Default Layer";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | ESC  |
-//        |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |       
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// ╭───────┬───────┬───────┬───────┬───────┬───────╮   ╭───────┬───────┬───────┬───────┬───────┬───────╮
+// │  ESC  │   Q   │   W   │   E   │   R   │   T   │   │   Y   │   U   │   I   │   O   │   P   │ BSPC  │
+// ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
+// │  TAB  │   A   │ ALT S │ CTRL D│ SHFT F│   G   │   │   H   │ SHFT J│ CTRL K│ ALT L │   ;   │  DEL  │
+// ╰───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────╯
+//         │   Z   │   X   │   C   │   V   │   B   │   │   N   │   M   │   ,   │   .   │   /   │        
+//         ╰───────┴───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┴───────╯        
+//                         │  GUI  │ MOVE  │ SPACE │   │ ENTER │NUMCHAR│ RGUI  │                        
+//                         ╰───────┴───────┴───────╯   ╰───────┴───────┴───────╯                        
                         bindings = <
-   &kp ESC   &kp Q &kp W      &kp E       &kp R        &kp T   &kp Y &kp U  &kp I       &kp O       &kp P      &kp BSPC
-   &kp TAB   &kp A &hml LALT S &hml LCTRL D &hml LSHIFT F &kp G   &kp H &hmr RSHIFT J &hmr RCTRL K &hmr RALT L  &kp SEMI   &kp DEL
-             &kp Z &kp X      &kp C       &kp V        &kp B   &kp N &kp M  &kp COMMA   &kp DOT     &kp FSLH        
-                  &kp LGUI &mo MOVE &kp SPACE   &kp RET &mo NUMCHAR &kp RGUI
+   &kp ESC   &kp Q        &kp W            &kp E             &kp R                &kp T                &kp Y             &kp U             &kp I           &kp O           &kp P        &kp BSPC
+   &kp TAB   &kp A        &hml LALT S      &hml LCTRL D      &hml LSHIFT F        &kp G                &kp H             &hmr RSHIFT J     &hmr RCTRL K    &hmr RALT L     &kp SEMI     &kp DEL
+             &kp Z        &kp X            &kp C             &kp V                &kp B                &kp N             &kp M             &kp COMMA       &kp DOT         &kp FSLH        
+                                           &kp LGUI          &mo MOVE             &kp SPACE            &kp RET           &mo NUMCHAR       &kp RGUI
                         >;
                 };
                 move_layer {
                         display-name = "Move Layer";
-// -----------------------------------------------------------------------------------------
-// | trans| none| none| none| none| MUTE|   | HOME| END | PGDN| PGUP| none| trans|
-// | trans| PLAY|ALT/P|CTL/N|SFT/B| VOLU|   | LEFT| DOWN|  UP | RGT | none| trans|
-//        | none| none| none| BRID| VOLD|   | APP | INS | CAPS| none| none|       
-//                    |trans|trans|trans|   |trans|trans|trans|
+// ╭───────┬───────┬───────┬───────┬───────┬───────╮   ╭───────┬───────┬───────┬───────┬───────┬───────╮
+// │ trans │ none  │ none  │ none  │ none  │ MUTE  │   │ HOME  │  END  │ PG DN │ PG UP │ none  │ trans │
+// ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
+// │ trans │ PLAY  │ALT PRV│CTL NXT│SFT BRU│ VOL U │   │ LEFT  │ DOWN  │  UP   │ RIGHT │ none  │ trans │
+// ╰───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────╯
+//         │ none  │ none  │ none  │ BRI D │ VOL D │   │  APP  │  INS  │ CAPS  │ none  │ none  │        
+//         ╰───────┴───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┴───────╯        
+//                         │ trans │ trans │ trans │   │ trans │ trans │ trans │                        
+//                         ╰───────┴───────┴───────╯   ╰───────┴───────┴───────╯                        
                         bindings = <
-   &trans &none    &none          &none           &none             &kp C_MUTE     &kp HOME &kp END  &kp PG_DN &kp PG_UP &none &trans
-   &trans &kp C_PP &hml LALT C_PREV &hml LCTRL C_NEXT &hml LSHIFT C_BRI_UP &kp C_VOL_UP   &kp LEFT &kp DOWN &kp UP    &kp RIGHT &none &trans
-          &none    &none          &none           &kp C_BRI_DN      &kp C_VOL_DN   &kp K_APP &kp INS &kp CAPS  &none     &none          
-                                  &trans          &trans            &trans         &trans   &trans   &trans
+   &trans    &none        &none            &none             &none                &kp C_MUTE           &kp HOME          &kp END           &kp PG_DN       &kp PG_UP       &none        &trans
+   &trans    &kp C_PP     &hml LALT C_PREV &hml LCTRL C_NEXT &hml LSHIFT C_BRI_UP &kp C_VOL_UP         &kp LEFT          &kp DOWN          &kp UP          &kp RIGHT       &none        &trans
+             &none        &none            &none             &kp C_BRI_DN         &kp C_VOL_DN         &kp K_APP         &kp INS           &kp CAPS        &none           &none          
+                                           &trans            &trans               &trans               &trans            &trans            &trans
                         >;
                 };
 
                 numchar_layer {
                         display-name = "Numchar Layer";
-// -----------------------------------------------------------------------------------------
-// | trans|  1  |  2  |  3  |  4  |  5  |   |  6  |  7    |  8  |  9  |  0  | trans|
-// | trans| none| LALT|CTL/`|SFT/-|  [  |   |  ]  |SFT/+= |CTL/'|ALT/\| none| trans|
-//        | none| none| none| none| (/< |   | )/> | none  | none| none| none|       
-//                    |trans|trans|trans|   |trans|trans  |trans|
+// ╭───────┬───────┬───────┬───────┬───────┬───────╮   ╭───────┬───────┬───────┬───────┬───────┬───────╮
+// │ trans │   1   │   2   │   3   │   4   │   5   │   │   6   │   7   │   8   │   9   │   0   │ trans │
+// ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
+// │ trans │ none  │  ALT  │CTL  ` │SFT  - │   [   │   │   ]   │SFT  = │CTL  ' │ALT  \ │ none  │ trans │
+// ╰───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────╯
+//         │ none  │ none  │ none  │ none  │  ( <  │   │  ) >  │ none  │ none  │ none  │ none  │        
+//         ╰───────┴───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┴───────╯        
+//                         │ trans │ trans │ trans │   │ trans │ trans │ trans │                        
+//                         ╰───────┴───────┴───────╯   ╰───────┴───────┴───────╯                        
                         bindings = <
-   &trans &kp N1 &kp N2   &kp N3          &kp N4           &kp N5             &kp N6                &kp N7           &kp N8          &kp N9         &kp N0 &trans
-   &trans &none  &kp LALT &hml LCTRL GRAVE &hml LSHIFT MINUS &kp LBKT           &kp RBKT              &hmr RSHIFT EQUAL &hmr RCTRL SQT   &hmr RALT BSLH  &none  &trans
-          &none  &none    &none           &none            &morph_paren_less  &morph_paren_greater  &none            &none           &none          &none          
-                          &trans          &trans           &trans             &trans                &trans           &trans
+   &trans    &kp N1       &kp N2           &kp N3            &kp N4               &kp N5               &kp N6            &kp N7            &kp N8          &kp N9          &kp N0       &trans
+   &trans    &none        &kp LALT         &hml LCTRL GRAVE  &hml LSHIFT MINUS    &kp LBKT             &kp RBKT          &hmr RSHIFT EQUAL &hmr RCTRL SQT  &hmr RALT BSLH  &none        &trans
+             &none        &none            &none             &none                &m_lpar_lt           &m_rpar_gt        &none             &none           &none           &none          
+                                           &trans            &trans               &trans               &trans            &trans            &trans
                         >;
                 };
 
                 extra_layer {
                         display-name = "Extra Layer";
-// -----------------------------------------------------------------------------------------
-// | trans|  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 | trans|
-// | trans| none| LALT|LCTRL|LSHFT| none|   |EP_TG| none| none| F11 | F12 | trans|
-//        | BT1 | BT2 | BT3 | BT4 | BT5 |   |BTCLR| ZMK | none| SYS | BOOT|       
-//                    |trans|trans|trans|   |trans|trans|trans|
+// ╭───────┬───────┬───────┬───────┬───────┬───────╮   ╭───────┬───────┬───────┬───────┬───────┬───────╮
+// │ trans │  F1   │  F2   │  F3   │  F4   │  F5   │   │  F6   │  F7   │  F8   │  F9   │  F10  │ trans │
+// ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
+// │ trans │ none  │  ALT  │ CTRL  │ SHFT  │ none  │   │ EP TG │ none  │ none  │  F11  │  F12  │ trans │
+// ╰───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────╯
+//         │ BT 1  │ BT 2  │ BT 3  │ BT 4  │ BT 5  │   │BT CLR │ZMK STU│ none  │SYS RES│ BOOT  │        
+//         ╰───────┴───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┴───────╯        
+//                         │ trans │ trans │ trans │   │ trans │ trans │ trans │                        
+//                         ╰───────┴───────┴───────╯   ╰───────┴───────┴───────╯                        
                         bindings = <
-   &trans &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &kp F6            &kp F7         &kp F8 &kp F9       &kp F10     &trans
-   &trans &none        &kp LALT     &kp LCTRL    &kp LSHIFT   &none          &ext_power EP_TOG &none          &none  &kp F11      &kp F12     &trans
-          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR        &studio_unlock &none  &sys_reset   &bootloader          
-                                    &trans       &trans       &trans         &trans            &trans         &trans
+   &trans    &kp F1       &kp F2           &kp F3            &kp F4               &kp F5               &kp F6            &kp F7            &kp F8          &kp F9          &kp F10      &trans
+   &trans    &none        &kp LALT         &kp LCTRL         &kp LSHIFT           &none                &ext_power EP_TOG &none             &none           &kp F11         &kp F12      &trans
+             &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2      &bt BT_SEL 3         &bt BT_SEL 4         &bt BT_CLR        &studio_unlock    &none           &sys_reset      &bootloader          
+                                           &trans            &trans               &trans               &trans            &trans            &trans
                         >;
                 };
         };
