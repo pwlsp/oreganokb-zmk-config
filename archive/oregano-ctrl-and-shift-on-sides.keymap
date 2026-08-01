@@ -52,8 +52,6 @@
                         key-positions = <7 8>;
                         bindings = <&kp RET>;
                 };
-
-                // problemem było zrobienie ctrl+shift+tab albo enter itd, jak to się rozwiąże to spoko
         };
 
         conditional_layers {
@@ -70,16 +68,16 @@
                 default_layer {
                         display-name = "Default Layer";
 // ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮
-// │ LSHIFT  │    Q    │    W    │    E    │    R    │    T    │   │    Y    │    U    │    I    │    O    │    P    │  LALT   │
+// │ LSHIFT  │    Q    │    W    │    E    │    R    │    T    │   │    Y    │    U    │    I    │    O    │    P    │  RSHIFT │
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-// │   GUI   │    A    │    S    │    D    │    F    │    G    │   │    H    │    J    │    K    │    L    │   ; :   │  LCTRL  │
+// │  LCTRL  │    A    │    S    │    D    │    F    │    G    │   │    H    │    J    │    K    │    L    │   ; :   │  RCTRL  │
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────╯
 //           │    Z    │    X    │    C    │    V    │    B    │   │    N    │    M    │   , <   │   . >   │   / ?   │          
 //           ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┴─────────╯          
-//                               │  LSHFT  │  MOVE   │  SPACE  │   │  RALT   │ NUMCHAR │  LALT   │                              
+//                               │   GUI   │  MOVE   │  SPACE  │   │  RALT   │ NUMCHAR │  LALT   │                              
 //                               ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯                              
                         bindings = <
-   &kp LSHIFT &kp Q        &kp W            &kp E             &kp R                &kp T                &kp Y             &kp U             &kp I           &kp O           &kp P           &kp LALT
+   &kp TAB    &kp Q        &kp W            &kp E             &kp R                &kp T                &kp Y             &kp U             &kp I           &kp O           &kp P           &kp RET
    &kp LGUI   &kp A        &kp S            &kp D             &kp F                &kp G                &kp H             &kp J             &kp K           &kp L           &kp SEMI        &kp LCTRL
               &kp Z        &kp X            &kp C             &kp V                &kp B                &kp N             &kp M             &kp COMMA       &kp DOT         &kp FSLH        
                                             &kp LSHIFT        &mo MOVE             &kp SPACE            &kp RALT          &mo NUMCHAR       &kp LALT
