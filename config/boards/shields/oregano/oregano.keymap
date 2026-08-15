@@ -134,16 +134,16 @@
 // ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮
 // │  trans  │   1 !   │   2 @   │   3 #   │   4 $   │   5 %   │   │   6 ^   │   7 &   │   8 *   │   9 (   │   0 )   │  trans  │
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-// │  trans  │  none   │  none   │   ` ~   │   - _   │   [ {   │   │   ] }   │   = +   │   ' "   │   \ |   │  none   │  trans  │
+// │  trans  │  none   │  none   │   ` ~   │   ' "   │   [ {   │   │   ] }   │   - _   │   = +   │   \ |   │  none   │  trans  │
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────╯
 //           │  none   │  none   │  none   │  none   │   ( <   │   │   ) >   │  none   │  none   │  none   │  none   │          
 //           ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┴─────────╯          
 //                               │  trans  │  trans  │  trans  │   │  trans  │  trans  │  trans  │                              
 //                               ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯                              
                         bindings = <
-   &trans    &kp N1       &kp N2           &kp N3            &kp N4               &kp N5               &kp N6            &kp N7            &kp N8          &kp N9          &kp N0          &trans
-   &trans    &none        &kp LALT         &hml LCTRL GRAVE  &hml LSHIFT MINUS    &kp LBKT             &kp RBKT          &hmr RSHIFT EQUAL &hmr RCTRL SQT  &hmr RALT BSLH  &none           &trans
-             &none        &none            &none             &none                &m_lpar_lt           &m_rpar_gt        &none             &none           &none           &none          
+   &trans    &kp N1       &kp N2           &kp N3            &kp N4               &kp N5               &kp N6            &kp N7            &kp N8           &kp N9          &kp N0          &trans
+   &trans    &none        &kp LALT         &hml LCTRL GRAVE  &hml LSHIFT SQT      &kp LBKT             &kp RBKT          &hmr RSHIFT MINUS &hmr RCTRL EQUAL &hmr RALT BSLH  &none           &trans
+             &none        &none            &none             &none                &m_lpar_lt           &m_rpar_gt        &none             &none            &none           &none          
                                            &trans            &trans               &trans               &trans            &trans            &trans
                         >;
                 };
