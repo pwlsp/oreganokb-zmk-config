@@ -122,10 +122,10 @@
 //                               │  trans  │  trans  │  trans  │   │  trans  │  trans  │  trans  │                              
 //                               ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯                              
                         bindings = <
-   &trans    &none        &none            &none             &none                &kp C_MUTE           &kp HOME          &kp END           &kp PG_DN       &kp PG_UP       &none           &trans
-   &trans    &kp C_PP     &hml LALT C_PREV &hml LCTRL C_NEXT &hml LSHIFT C_BRI_UP &kp C_VOL_UP         &kp LEFT          &kp DOWN          &kp UP          &kp RIGHT       &none           &trans
-             &none        &none            &none             &kp C_BRI_DN         &kp C_VOL_DN         &kp K_APP         &kp INS           &kp CAPS        &none           &none          
-                                           &trans            &trans               &trans               &trans            &trans            &trans
+   &trans    &none          &none            &none             &none                &kp C_MUTE           &kp HOME          &kp END           &kp PG_DN       &kp PG_UP       &none           &trans
+   &trans    &hml LGUI C_PP &hml LALT C_PREV &hml LCTRL C_NEXT &hml LSHIFT C_BRI_UP &kp C_VOL_UP         &kp LEFT          &kp DOWN          &kp UP          &kp RIGHT       &none           &trans
+             &none          &none            &none             &kp C_BRI_DN         &kp C_VOL_DN         &kp K_APP         &kp INS           &kp CAPS        &none           &none          
+                                             &trans            &trans               &trans               &trans            &trans            &trans
                         >;
                 };
 
@@ -142,7 +142,7 @@
 //                               ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯                              
                         bindings = <
    &trans    &kp N1       &kp N2           &kp N3            &kp N4               &kp N5               &kp N6            &kp N7            &kp N8           &kp N9          &kp N0          &trans
-   &trans    &none        &kp LALT         &hml LCTRL GRAVE  &hml LSHIFT SQT      &kp LBKT             &kp RBKT          &hmr RSHIFT MINUS &hmr RCTRL EQUAL &hmr RALT BSLH  &none           &trans
+   &trans    &kp LGUI     &kp LALT         &hml LCTRL GRAVE  &hml LSHIFT SQT      &kp LBKT             &kp RBKT          &hmr RSHIFT MINUS &hmr RCTRL EQUAL &hmr RALT BSLH  &kp RGUI       &trans
              &none        &none            &none             &none                &m_lpar_lt           &m_rpar_gt        &none             &none            &none           &none          
                                            &trans            &trans               &trans               &trans            &trans            &trans
                         >;
