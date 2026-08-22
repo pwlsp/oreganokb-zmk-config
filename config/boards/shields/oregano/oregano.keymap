@@ -142,7 +142,7 @@
 //                               ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯                              
                         bindings = <
    &trans    &kp N1       &kp N2           &kp N3            &kp N4               &kp N5               &kp N6            &kp N7            &kp N8           &kp N9          &kp N0          &trans
-   &trans    &kp LGUI     &kp LALT         &hml LCTRL GRAVE  &hml LSHIFT SQT      &m_lpar_lt           &m_rpar_gt        &hmr RSHIFT MINUS &hmr RCTRL EQUAL &hmr RALT BSLH  &kp RGUI       &trans
+   &trans    &kp LGUI     &kp LALT         &hml LCTRL GRAVE  &hml LSHIFT SQT      &m_lpar_lt           &m_rpar_gt        &hmr RSHIFT MINUS &hmr RCTRL EQUAL &hmr LALT BSLH  &kp RGUI       &trans
              &none        &none            &none             &none                &kp LBKT             &kp RBKT          &none             &none            &none           &none          
                                            &trans            &trans               &trans               &trans            &trans            &trans
                         >;
