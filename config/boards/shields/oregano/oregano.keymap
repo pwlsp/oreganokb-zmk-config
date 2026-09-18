@@ -113,17 +113,17 @@
                 move_layer {
                         display-name = "Move Layer";
 // ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮
-// │  trans  │  none   │  none   │  none   │  none   │  MUTE   │   │  HOME   │   END   │  PG DN  │  PG UP  │  none   │  trans  │
+// │  trans  │  none   │  none   │  none   │ MICMUTE │  MUTE   │   │  HOME   │   END   │  PG DN  │  PG UP  │  none   │  trans  │
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-// │  trans  │  PLAY   │  PREV   │  NEXT   │  BRI U  │  VOL U  │   │  LEFT   │  DOWN   │   UP    │  RIGHT  │  none   │  trans  │
+// │  trans  │  PLAY   │  PREV   │  NEXT   │  BRI U  │  VOL U  │   │  LEFT   │  DOWN   │   UP    │  RIGHT  │  PRINT  │  trans  │
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────╯
 //           │  none   │  none   │  none   │  BRI D  │  VOL D  │   │   APP   │   INS   │  CAPS   │  none   │  none   │          
 //           ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┴─────────╯          
 //                               │  trans  │  trans  │  trans  │   │  trans  │  trans  │  trans  │                              
 //                               ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯                              
                         bindings = <
-   &trans    &none          &none            &none             &none                &kp C_MUTE           &kp HOME          &kp END           &kp PG_DN       &kp PG_UP       &none           &trans
-   &trans    &hml LGUI C_PP &hml LALT C_PREV &hml LCTRL C_NEXT &hml LSHIFT C_BRI_UP &kp C_VOL_UP         &kp LEFT          &kp DOWN          &kp UP          &kp RIGHT       &none           &trans
+   &trans    &none          &none            &none             &kp F20              &kp C_MUTE           &kp HOME          &kp END           &kp PG_DN       &kp PG_UP       &none           &trans
+   &trans    &hml LGUI C_PP &hml LALT C_PREV &hml LCTRL C_NEXT &hml LSHIFT C_BRI_UP &kp C_VOL_UP         &kp LEFT          &kp DOWN          &kp UP          &kp RIGHT       &kp PSCRN       &trans
              &none          &none            &none             &kp C_BRI_DN         &kp C_VOL_DN         &kp K_APP         &kp INS           &kp CAPS        &none           &none          
                                              &trans            &trans               &trans               &trans            &trans            &trans
                         >;
