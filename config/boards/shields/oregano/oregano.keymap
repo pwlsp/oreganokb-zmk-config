@@ -36,14 +36,16 @@
                 m_lpar_lt: m_lpar_lt {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp LPAR>, <&kp LT>;
+                        bindings = <&kp LPAR>, <&kp COMMA>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
+                        keep-mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
                 m_rpar_gt: m_rpar_gt {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp RPAR>, <&kp GT>;
+                        bindings = <&kp RPAR>, <&kp DOT>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
+                        keep-mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
                 m_bspc_del: m_bspc_del {
                         compatible = "zmk,behavior-mod-morph";
