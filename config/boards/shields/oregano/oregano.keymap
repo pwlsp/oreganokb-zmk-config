@@ -136,16 +136,16 @@
 // ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮
 // │  trans  │   1 !   │   2 @   │   3 #   │   4 $   │   5 %   │   │   6 ^   │   7 &   │   8 *   │   9 (   │   0 )   │  trans  │
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-// │  trans  │  none   │  none   │   ` ~   │   ' "   │   ( <   │   │   ) >   │   - _   │   = +   │   \ |   │  none   │  trans  │
+// │  trans  │    !    │    @    │    #    │    $    │    %    │   │    ^    │    &    │    *    │    (    │    )    │  trans  │
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────╯
-//           │  none   │  none   │  none   │  none   │   [ {   │   │   ] }   │  none   │  none   │  none   │  none   │          
+//           │  none   │   ` ~   │   ' "   │  [ {    │   ( <   │   │   ) >   │   ] }   │   - _   │   = +   │   \ |   │
 //           ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┴─────────╯          
 //                               │  trans  │  trans  │  trans  │   │  trans  │  trans  │  trans  │                              
 //                               ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯                              
                         bindings = <
    &trans    &kp N1       &kp N2           &kp N3            &kp N4               &kp N5               &kp N6            &kp N7            &kp N8           &kp N9          &kp N0          &trans
-   &trans    &kp LGUI     &kp LALT         &hml LCTRL GRAVE  &hml LSHIFT SQT      &m_lpar_lt           &m_rpar_gt        &hmr RSHIFT MINUS &hmr RCTRL EQUAL &hmr LALT BSLH  &kp RGUI       &trans
-             &none        &none            &none             &none                &kp LBKT             &kp RBKT          &none             &none            &none           &none          
+   &trans    &kp EXCL     &kp AT           &kp HASH          &kp DLLR             &kp PRCNT            &kp CARET         &kp AMPS         &kp ASTRK       &kp LPAR       &kp RPAR       &trans
+             &none        &kp GRAVE        &kp SQT           &kp LBKT             &m_lpar_lt           &m_rpar_gt        &kp RBKT         &kp MINUS       &kp EQUAL      &kp BSLH
                                            &trans            &trans               &trans               &trans            &trans            &trans
                         >;
                 };
