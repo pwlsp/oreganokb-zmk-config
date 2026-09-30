@@ -138,14 +138,14 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
 // │  trans  │    !    │    @    │    #    │    $    │    %    │   │    ^    │    &    │    *    │    (    │    )    │  trans  │
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────╯
-//           │  none   │   ` ~   │   ' "   │  [ {    │   ( <   │   │   ) >   │   ] }   │   - _   │   = +   │   \ |   │
+//           │    ~    │   ` ~   │   ' "   │  [ {    │   ( <   │   │   ) >   │   ] }   │   - _   │   = +   │   \ |   │
 //           ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┴─────────╯          
 //                               │  trans  │  trans  │  trans  │   │  trans  │  trans  │  trans  │                              
 //                               ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯                              
                         bindings = <
-   &trans    &kp N1       &kp N2           &kp N3            &kp N4               &kp N5               &kp N6            &kp N7            &kp N8           &kp N9          &kp N0          &trans
+   &trans    &kp N1         &kp N2         &kp N3            &kp N4               &kp N5               &kp N6            &kp N7           &kp N8           &kp N9          &kp N0          &trans
    &trans    &hml LGUI EXCL &hml LALT AT   &hml LCTRL HASH   &hml LSHIFT DLLR     &kp PRCNT            &kp CARET         &hmr RSHIFT AMPS &hmr RCTRL ASTRK &hmr LALT LPAR &hmr RGUI RPAR &trans
-             &none        &kp GRAVE        &kp SQT           &kp LBKT             &m_lpar_lt           &m_rpar_gt        &kp RBKT         &kp MINUS       &kp EQUAL      &kp BSLH
+             &TILDE         &kp GRAVE      &kp SQT           &kp LBKT             &m_lpar_lt           &m_rpar_gt        &kp RBKT         &kp MINUS        &kp EQUAL      &kp BSLH
                                            &trans            &trans               &trans               &trans            &trans            &trans
                         >;
                 };
